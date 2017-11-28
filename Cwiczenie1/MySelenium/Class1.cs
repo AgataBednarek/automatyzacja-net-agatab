@@ -6,6 +6,7 @@ using OpenQA.Selenium.Support.UI;
 using Xunit;
 using OpenQA.Selenium.Chrome;
 using System.Linq;
+using System.Threading;
 
 namespace SeleniumTests
 
@@ -44,6 +45,7 @@ namespace SeleniumTests
 
             driver.FindElement(By.LinkText("Akceptuję")).Click();
 
+            Thread.Sleep(2000);
             waitForElementPresent(By.LinkText("Poznaj nasze podejście"), 5);
 
             driver.FindElement(By.LinkText("Poznaj nasze podejście")).Click();
@@ -68,7 +70,6 @@ namespace SeleniumTests
                 wait.Until(ExpectedConditions.ElementToBeClickable(by));
             }
 
-        
         //private bool IsElementPresent(By by)
         //{
         //    try
