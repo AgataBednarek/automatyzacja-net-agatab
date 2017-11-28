@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace Cwiczenie1
 {
-    public class Class1
+    public class Matematyka
     {
+        public double Add(double x, double y)
+        {
+            return x + y;
+        }
+        public double Substract(double x, double y)
+        {
+            return x - y;
+        }
+        public double Multiply(double x, double y)
+        {
+            return x * y;
+        }
+        public double Division(double x, double y)
+        {
+            return x / y;
+        }
     }
 }
